@@ -51,8 +51,8 @@ class SensorApp(App):
     
         # Vectorized zeroing of points outside radius
         mask = (
-            (np.real(yf) <= 0.03) & (np.real(yf) >= -0.03) &
-            (np.imag(yf) >= -0.01) & (np.imag(yf) <= 0.01)
+            (np.real(yf) <= 0.08) & (np.real(yf) >= -0.08) &
+            (np.imag(yf) >= -0.07) & (np.imag(yf) <= 0.07)
         )
         
         yf = np.where(mask, yf, 0 + 0j)
@@ -116,8 +116,7 @@ class SensorApp(App):
         a_world_no_grav = (a_world - self.ekf.g)# if (a_world - self.ekf.g).any() > 1.1 else np.zeros(3)
     
         # ZUPT detection
-        if np.linalg.norm(a_world) < Config.g[2]
-         and np.linalg.norm(gyro_smooth) < 0.5:
+        if np.linalg.norm(a_world) < Config.g[2] and np.linalg.norm(gyro_smooth) < 0.5:
             self.ekf.update_zupt()
             motion_status = "Stationary (ZUPT applied)"
         else:
