@@ -2,6 +2,8 @@
 
 this is partially complete INS for smartphone without root. 
 
-additional filtering of accelerometer will be added.
+additional filtering of accelerometer - fft - was added.
 
 use it for 3D scanning purposes only, but i know...
+
+works on pydroid3
