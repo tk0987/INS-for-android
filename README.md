@@ -1,6 +1,8 @@
 # Pydroid3-imu-kalman
 
-this is partially complete INS for smartphone without root. 
+this is partially complete INS for smartphone without root. Kalman and fft filters.
+
+before running the code on your device you must log accelerometer data, and obtain fourier spectra in fft=exp(iR) representation. This will allow you to create fft mask (preserve negative freqs for mathematical symmetry).
 
 additional filtering of accelerometer - fft - was added.
 
