@@ -1,6 +1,6 @@
 # Phone INS
 
-this is partially complete INS for smartphone without root. Kalman and fft filters.
+this is partially complete VIO + INS (VIO will be complete soon, while INS works only for orientation, not positioning - despite fft&kalman) for smartphone without root. Kalman and fft filters.
 
 before running the code on your device you must log accelerometer data, and obtain fourier spectra in fft=exp(iR) representation. This will allow you to create fft mask (preserve negative freqs for mathematical symmetry).
 
